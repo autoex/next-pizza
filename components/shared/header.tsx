@@ -22,6 +22,7 @@ export const Header: React.FC<Props> = ({ className }) => {
             width={35}
             height={35}
             alt='Pizza'
+            className=' animate-bounce'
           />
           <div>
             <h1 className=' text-2xl uppercase font-black'>Next Pizza</h1>
@@ -30,7 +31,7 @@ export const Header: React.FC<Props> = ({ className }) => {
             </p>
           </div>
         </div>
-        <div>
+        <div className='hidden md:block'>
           <Input />
         </div>
         <div className=' flex items-center gap-3'>
