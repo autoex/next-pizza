@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+import React, { useEffect } from 'react';
+import { useIntersection } from 'react-use';
 import { Title } from './title';
 import { cn } from '@/lib/utils';
 import { ProductCard } from './product-card';
@@ -18,8 +20,21 @@ export const ProductsGroupList: React.FC<Props> = ({
   className,
   listClassName,
 }) => {
+  const intersectionRef = React.useRef(null);
+  const intersection = useIntersection(intersectionRef, {
+    threshold: 0.4,
+  });
+
+  useEffect(() => {
+    if (intersection?.isIntersecting) {
+      console.log(title, categoryId);
+    }
+  }, [categoryId, title, intersection?.isIntersecting]);
   return (
-    <div className={className}>
+    <div
+      className={className}
+      id={title}
+      ref={intersectionRef}>
       <Title
         text={title}
         size='lg'
