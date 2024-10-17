@@ -66,6 +66,11 @@ export default function Home() {
                 categoryId={1}
                 items={pizzasList}
               />
+              <ProductsGroupList
+                title='Snacks'
+                categoryId={2}
+                items={pizzasList}
+              />
             </div>
           </div>
         </div>
