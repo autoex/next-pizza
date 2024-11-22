@@ -68,7 +68,7 @@ export default function Home() {
               />
               <ProductsGroupList
                 title='Snacks'
-                categoryId={2}
+                categoryId={3}
                 items={pizzasList}
               />
             </div>
