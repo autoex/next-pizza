@@ -15,7 +15,6 @@ const categories = [
   { id: 5, name: 'Coffee' },
   { id: 6, name: 'Drinks' },
   { id: 7, name: 'Desserts' },
-  { id: 8, name: 'Desserts' },
 ];
 
 export const Categories: React.FC<Props> = ({ className }) => {
