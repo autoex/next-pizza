@@ -14,7 +14,7 @@ const pizzasList = [
     name: 'Margarita',
     items: [{ price: 12 }],
     imageUrl:
-      'https://media.dodostatic.net/image/r:292x292/11EE7D610D2925109AB2E1C92CC5383C.avif',
+      'https://res.cloudinary.com/ddnsdfd5l/image/upload/v1738589908/pizzzas/vdmn6wgusif29tfpfb4l.avif',
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const pizzasList = [
     items: [{ price: 12 }],
     name: 'Margarita',
     imageUrl:
-      'https://media.dodostatic.net/image/r:292x292/11EE7D610D2925109AB2E1C92CC5383C.avif',
+      'https://res.cloudinary.com/ddnsdfd5l/image/upload/v1738589908/pizzzas/vdmn6wgusif29tfpfb4l.avif',
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const pizzasList = [
     items: [{ price: 12 }],
     name: 'Margarita',
     imageUrl:
-      'https://media.dodostatic.net/image/r:292x292/11EE7D610D2925109AB2E1C92CC5383C.avif',
+      'https://res.cloudinary.com/ddnsdfd5l/image/upload/v1738589908/pizzzas/vdmn6wgusif29tfpfb4l.avif',
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const pizzasList = [
     items: [{ price: 12 }],
     name: 'Margarita',
     imageUrl:
-      'https://media.dodostatic.net/image/r:292x292/11EE7D610D2925109AB2E1C92CC5383C.avif',
+      'https://res.cloudinary.com/ddnsdfd5l/image/upload/v1738589908/pizzzas/vdmn6wgusif29tfpfb4l.avif',
   },
 ];
 export default function Home() {

@@ -1,6 +1,6 @@
 import { hashSync } from 'bcrypt';
 import { prisma } from './prisma-client';
-import { categories } from './constants';
+import { categories, ingredients } from './constants';
 
 async function up() {
   await prisma.user.createMany({
@@ -25,10 +25,13 @@ async function up() {
   await prisma.category.createMany({
     data: categories
   })
+
+  await prisma.ingredient.createMany({
+    data: ingredients
+  })
 }
 async function down() {
   await prisma.$executeRaw `TRUNCATE TABLE "User" RESTART IDENTITY CASCADE;`;
-  await prisma.$executeRaw `TRUNCATE TABLE "Category" RESTART IDENTITY CASCADE;`;
 }
 async function main() {
   try {
