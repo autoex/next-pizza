@@ -8,26 +8,7 @@ export const categories = [
   { name: 'Desserts' },
 ];
 
-export const pizzas = [
-  {
-    name: 'Pepperoni Fresh',
-    imageUrl:
-      'https://res.cloudinary.com/ddnsdfd5l/image/upload/v1738589908/pizzzas/iuhoxvursigwen218apz.webp',
-    active: true,
-  },
-  {
-    name: 'Cheese',
-    imageUrl:
-      'https://res.cloudinary.com/ddnsdfd5l/image/upload/v1738589908/pizzzas/vdmn6wgusif29tfpfb4l.avif',
-    active: true,
-  },
-  {
-    name: 'Chorizo Fresh',
-    imageUrl:
-      'https://res.cloudinary.com/ddnsdfd5l/image/upload/v1738589908/pizzzas/hsjmzyffdjm3siwhnz1b.webp',
-    active: true,
-  },
-];
+
 
 export const ingredients = [
   {
