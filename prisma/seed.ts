@@ -110,6 +110,25 @@ async function up() {
       generateProductItem({ productId: pizza3.id, pizzaType: 1, size: 20 }),
       generateProductItem({ productId: pizza3.id, pizzaType: 2, size: 30 }),
       generateProductItem({ productId: pizza3.id, pizzaType: 2, size: 40 }),
+
+      // Other products
+      generateProductItem({ productId: 1 }),
+      generateProductItem({ productId: 2 }),
+      generateProductItem({ productId: 3 }),
+      generateProductItem({ productId: 4 }),
+      generateProductItem({ productId: 5 }),
+      generateProductItem({ productId: 6 }),
+      generateProductItem({ productId: 7 }),
+      generateProductItem({ productId: 8 }),
+      generateProductItem({ productId: 9 }),
+      generateProductItem({ productId: 10 }),
+      generateProductItem({ productId: 11 }),
+      generateProductItem({ productId: 12 }),
+      generateProductItem({ productId: 13 }),
+      generateProductItem({ productId: 14 }),
+      generateProductItem({ productId: 15 }),
+      generateProductItem({ productId: 16 }),
+      generateProductItem({ productId: 17 }),
     ],
   });
 }
@@ -123,7 +142,7 @@ async function down() {
 async function main() {
   try {
     await down();
-    await up();
+   await up();
   } catch (error) {
     console.log(error);
   }
