@@ -4,7 +4,7 @@ import { categories, ingredients, products } from './constants';
 import { Prisma } from '@prisma/client';
 
 const randomNumber = (min: number, max: number) =>
-  Math.floor((Math.random() * (max - min * 10)) / 10);
+  Math.floor(Math.random() * (max - min + 1)) + min;
 
 const generateProductItem = ({
   productId,  
