@@ -7,7 +7,7 @@ const randomNumber = (min: number, max: number) =>
   Math.floor(Math.random() * (max - min + 1)) + min;
 
 const generateProductItem = ({
-  productId,  
+  productId,
   pizzaType,
   size,
 }: {
@@ -131,10 +131,30 @@ async function up() {
       generateProductItem({ productId: 17 }),
     ],
   });
+
+  await prisma.cart.createMany({
+    data: [
+      { userId: 1, totalAmount: 0, token: '123' },
+      { userId: 2, totalAmount: 0, token: '1222' },
+    ],
+  });
+
+  await prisma.cartItem.create({
+    data: {
+      productItemId: 1,
+      cartId: 1,
+      quantity: 2,
+      ingredients: {
+        connect: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }],
+      },
+    },
+  });
 }
 async function down() {
   await prisma.$executeRaw`TRUNCATE TABLE "User" RESTART IDENTITY CASCADE;`;
   await prisma.$executeRaw`TRUNCATE TABLE "Category" RESTART IDENTITY CASCADE;`;
+  await prisma.$executeRaw`TRUNCATE TABLE "Cart" RESTART IDENTITY CASCADE;`;
+  await prisma.$executeRaw`TRUNCATE TABLE "CartItem" RESTART IDENTITY CASCADE;`;
   await prisma.$executeRaw`TRUNCATE TABLE "Ingredient" RESTART IDENTITY CASCADE;`;
   await prisma.$executeRaw`TRUNCATE TABLE "Product" RESTART IDENTITY CASCADE;`;
   await prisma.$executeRaw`TRUNCATE TABLE "ProductItem" RESTART IDENTITY CASCADE;`;
@@ -142,7 +162,7 @@ async function down() {
 async function main() {
   try {
     await down();
-   await up();
+    await up();
   } catch (error) {
     console.log(error);
   }
